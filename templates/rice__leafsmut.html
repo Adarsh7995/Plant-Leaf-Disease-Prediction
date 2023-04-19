@@ -1,0 +1,85 @@
+﻿<
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>RICE LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Rice Leaf Disease & Get Cure</h1>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Rice_Leaf_Spot.JPG' )}}" alt="User Image" style="width:300px;height:300px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}}
+                    </h1>
+                </div>
+                <div class="details">
+
+                    <h4><b> Treatment : </b> </h4>
+                    <p>
+                       1.Use resistant varieties.<br/>
+                       2.Avoid planting rice in the samr field year after year.Rotate with other crops that are not hosts to the disease.<br/>
+                        3.Apply fungicides like carbenazim,mancozeb or propiconazole to prevebt the spread of the disease.<br/>
+                        4.Remove and destroy infected plant debris to prevent the spread of disease to healthy plants.<br/>
+                        5.Avoid overhead irrigation,which can spread the disease.Instead using drip irrigation or furrow irrigation.<br/>
+                        6.Maintain soil fertility levels to keep the rice plants healthy and less susceptible to disease.<br/>
+                        7.Plant rice at the proper spacing to allow for adequate air circulation,which can reduce the spread of the disease.
+                    
+
+
+                        </br></br>
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

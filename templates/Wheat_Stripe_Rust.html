@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title> WHEAT LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict of Stripe rust  of Wheat Leaf Disease & Get Cure</h1>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Wheat_Septoria.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}}
+                    </h1>
+                </div>
+                <div class="details">
+
+                    <h4><b> Treatment : </b> </h4>
+                    <h6>
+                        
+                        1.Remove volunteer wheat plants (the 'green bridge') that will support stripe rust inoculum in the 6 weeks prior to sowing.<br />
+                        2.Avoid growing Susceptible (S) and Very Susceptible (VS) varieties by selecting more resistant varieties.<br />
+                        3.Use a seed or fertiliser treatment to suppress early infection.<br />
+                        4.Monitor crops during the growing season and apply a foliar fungicide early in the epidemic, if required.<br />
+						
+                        </br>
+
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

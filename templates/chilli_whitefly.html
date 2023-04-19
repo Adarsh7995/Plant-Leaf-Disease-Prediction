@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>CHILLI LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Chilli Leaf Disease & Get Cure</h1>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Chilli_Whitefly.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}}
+                    </h1>
+                </div>
+                <div class="details">
+
+                    <h4><b> Treatment : </b> </h4>
+                    <h6>
+                        1.Plant products namely Neem seed kernel Extract 5% (50 kg) and Neem oil at 5ml/lit. or fish oil 
+                        rosin soap 2kg @ 1kg in 40 litre of water may be sprayed individually or in combination with the 
+                        recommended dose of insecticide (at 2ml/lit of water).<br/>
+                        2.During early stages, spray methyl demeton 25 EC @500 ml (500 lit of spray fluid/ha).<br/>
+                        3.During mid and late stage ,spray ethion 50 EC @1.0 lit/ha, triazophos 25 EC @ 2.0 lit/ha and acephate 75 SP @ 1.30 kg/ha.
+
+                        <br>
+                        <br>
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

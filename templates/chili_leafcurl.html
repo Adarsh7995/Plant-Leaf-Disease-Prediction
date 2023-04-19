@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>CHILLI LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Chilli Leaf Disease & Get Cure</h1>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Chilli_Leaf_Curl.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}}
+                    </h1>
+                </div>
+                <div class="details">
+
+                    <h4><b> Treatment : </b> </h4>
+                    <h6>
+                        Chilli leaf curl virus is transmitted by whiteflies and is a serious threat to chilli fields.<br/>
+                        1.There is need to control the whitefly population to prevent the virus from spreading.For this you can use neem or horticultural
+                        oils.Ensure that the oils are thoroughly applied to the plants,especially to the lower side of the leaves where whiteflies are most likely to be found.
+                    <br/>
+                        2.Plants that are very early infected and have a very low disease incidence should be removed and burned as soon as possible.<br/>
+                        3.A sticky yellow trap or yellow sheets should be placed at different locations throughout the field to attract the whiteflies.<br/>
+                        4.You can control whiteflies by spraying five tablespoons of dishwashing soap in 20 liters of water at intervals of 7-14 days to keep them away.<br/>
+                        5.It is recommended that you spray neem seed water extract to control vectors within 14 days of their appearance.  
+                        <br>
+                        <br>
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>SUGARCANE LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Background.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Sugarcane Leaf Disease & Get Cure</h1>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Sugarcane_Rearot.jpg' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}}
+                    </h1>
+                </div>
+                <div class="details">
+
+                    <h4><b> Treatment : </b> </h4>
+                    <h6>
+                        1.Chemical Control : Use fungitoxic chemicals like bavistan, Benomyl, Topsin and Aretan at 0.1 precent for 18 min. at 52<sup>0</sup>C for dipping setts which gave almost complete elumination of rot infection.<br />
+                        2.Cultural Control : 1.The best way to control red rot is to select setts for planting from healthy plants in a disease- free area.<br/>
+						                     2.The red rot affected field must be roated with rice for one season and other crops for two seasons<br />
+                        3.Resistance breeding : Cultivate disease resistant sugarcane Varieties.<br />
+                        4.Biocontrol : Use of biological control agents like Bacillus subtilis and Trichoderma harzianum.<br />
+
+
+                        </br></br>
+
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
